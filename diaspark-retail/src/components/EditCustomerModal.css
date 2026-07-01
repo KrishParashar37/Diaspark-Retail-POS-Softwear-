@@ -1,0 +1,224 @@
+.edit-customer-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+}
+
+.edit-customer-modal-container {
+  background-color: #f0f0f0;
+  width: fit-content;
+  max-width: 95vw;
+  height: auto;
+  max-height: 95vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid #999;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.edit-customer-modal-header {
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.edit-customer-modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-customer-top-tabs {
+  display: flex;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px 0 10px;
+}
+
+.edit-customer-top-tab {
+  padding: 5px 15px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.edit-customer-top-tab.active {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #f0f0f0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+  top: 1px;
+}
+
+.edit-customer-sub-tabs {
+  display: flex;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.edit-customer-sub-tab {
+  padding: 3px 8px;
+  color: #0056b3;
+  cursor: pointer;
+  font-weight: normal;
+  border-right: 1px solid #ccc;
+}
+
+.edit-customer-sub-tab:last-child {
+  border-right: none;
+}
+
+.edit-customer-sub-tab.active {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.edit-customer-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f0f0f0;
+}
+
+.edit-customer-form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.edit-customer-label {
+  width: 140px;
+  text-align: right;
+  font-size: 11px;
+  padding-right: 5px;
+}
+
+.edit-customer-input {
+  border: 1px solid #aaa;
+  padding: 2px 5px;
+  font-size: 11px;
+}
+
+.edit-customer-input:disabled {
+  background-color: #e0e0e0;
+}
+
+.edit-customer-select {
+  border: 1px solid #aaa;
+  padding: 1px 5px;
+  font-size: 11px;
+}
+
+.edit-customer-lookup-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.edit-customer-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  background: linear-gradient(to bottom, #f9f9f9, #e5e5e5);
+  border-top: 1px solid #ccc;
+}
+
+.edit-customer-action-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  border-radius: 3px;
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.edit-customer-action-btn:hover {
+  background: linear-gradient(to bottom, #8bb5eb, #598ddd);
+}
+
+.edit-customer-buys-on-box {
+  border: 1px solid #aaa;
+  padding: 5px;
+  width: 180px;
+  background-color: #f0f0f0;
+}
+
+.edit-customer-buys-on-header {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.edit-customer-buys-on-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.edit-customer-purchase-container {
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.edit-customer-purchase-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.edit-customer-purchase-table th {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 4px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.edit-customer-purchase-table td {
+  border: 1px solid #eee;
+  padding: 4px;
+  height: 20px;
+}
+
+.edit-customer-purchase-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

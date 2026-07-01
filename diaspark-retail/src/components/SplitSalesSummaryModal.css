@@ -1,0 +1,134 @@
+.split-sales-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.split-sales-modal {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.split-sales-header {
+  background: linear-gradient(to bottom, #d9e5f9, #b5cbf2);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #999;
+  font-weight: bold;
+  font-size: 14px;
+  color: #003366;
+}
+
+.split-sales-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+.split-sales-body {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.split-sales-row {
+  display: flex;
+  align-items: center;
+}
+
+.split-sales-label {
+  width: 100px;
+  text-align: right;
+  margin-right: 15px;
+}
+
+.split-sales-date-labels {
+  display: flex;
+  margin-left: 115px;
+  margin-bottom: 5px;
+}
+
+.split-sales-date-labels > span {
+  width: 110px;
+  display: inline-block;
+}
+
+.split-sales-date-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.split-sales-checkbox {
+  margin-right: 10px;
+}
+
+.split-sales-input {
+  border: 1px solid #aaa;
+  padding: 3px 5px;
+  width: 100px;
+}
+
+.split-sales-select {
+  border: 1px solid #aaa;
+  padding: 3px;
+  width: 180px;
+}
+
+.split-sales-radio-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.split-sales-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.split-sales-footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.split-sales-btn {
+  background: linear-gradient(to bottom, #86acf2, #5580e5);
+  border: 1px solid #436cc9;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  padding: 6px 20px;
+  min-width: 80px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.split-sales-btn:hover {
+  background: linear-gradient(to bottom, #9abaf4, #698fe8);
+}

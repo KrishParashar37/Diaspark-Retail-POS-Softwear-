@@ -1,0 +1,97 @@
+.salesperson-modal {
+  width: 320px;
+  background-color: #e5e5e5;
+  border: 1px solid #777;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.salesperson-modal-body {
+  padding: 10px;
+  background-color: #dfdfdf;
+}
+
+.open-lookup-btn {
+  background: linear-gradient(to bottom, #fefefe, #e2e2e2);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.open-lookup-btn:hover {
+  background: linear-gradient(to bottom, #fff, #efefef);
+}
+
+.salesperson-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sp-header-row {
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.sp-col-name {
+  width: 170px;
+}
+
+.sp-col-pct {
+  width: 60px;
+  text-align: center;
+}
+
+.sp-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-input-name {
+  width: 170px;
+  height: 20px;
+  border: 1px solid #aaa;
+  padding: 2px 4px;
+}
+
+.sp-input-pct {
+  width: 50px;
+  height: 20px;
+  border: 1px solid #aaa;
+  padding: 2px 4px;
+  text-align: right;
+  background-color: #eee;
+}
+
+.sp-minus-icon {
+  width: 8px;
+  height: 3px;
+  background-color: #888;
+  border: 1px solid #555;
+  cursor: pointer;
+}
+
+.sp-total-row {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25px;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.salesperson-modal-footer {
+  background-color: #d1d1d1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  border-top: 1px solid #bbb;
+}

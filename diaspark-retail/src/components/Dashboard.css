@@ -1,0 +1,99 @@
+.dashboard {
+  flex: 1;
+  padding: 16px 14px;
+}
+
+/* Category header tabs row */
+.category-tabs {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.category-tab {
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px 4px;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+  border: none;
+}
+
+.category-tab.sales { background-color: #a8d5a2; grid-column: span 2; }
+.category-tab.order { background-color: #a8c8e8; grid-column: span 2; }
+.category-tab.payment { background-color: #f4a8b0; grid-column: span 1; }
+.category-tab.other { background-color: #f5e6a0; grid-column: span 2; }
+.category-tab.report { background-color: #f5d0a0; grid-column: span 2; }
+
+/* Main grid for all buttons - table style removed, now floating buttons */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 12px 10px;
+}
+
+/* Menu button */
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px 6px 4px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+  min-height: 80px;
+  transition: filter 0.12s;
+}
+
+.menu-btn:hover {
+  filter: brightness(0.95);
+}
+
+/* Specific button background colors */
+.menu-btn.sales-btn { background-color: #f0fbee; }
+.menu-btn.sales-btn:active { background-color: #a8d5a2; }
+
+.menu-btn.order-btn { background-color: #effaff; }
+.menu-btn.order-btn:active { background-color: #a8c8e8; }
+
+.menu-btn.payment-btn { background-color: #ffeeee; }
+.menu-btn.payment-btn:active { background-color: #f4a8b0; }
+
+.menu-btn.other-btn { background-color: #ffffe8; }
+.menu-btn.other-btn:active { background-color: #f5e6a0; }
+
+.menu-btn.report-btn { background-color: #fff2e6; }
+.menu-btn.report-btn:active { background-color: #f5d0a0; }
+
+.menu-btn-empty {
+  background-color: transparent;
+  min-height: 80px;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.menu-icon svg {
+  width: 38px;
+  height: 38px;
+}
+
+.menu-label {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: #222;
+  white-space: pre-line;
+  line-height: 1.3;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}

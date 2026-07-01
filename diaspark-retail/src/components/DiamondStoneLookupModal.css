@@ -1,0 +1,122 @@
+.diamond-stone-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.diamond-stone-modal {
+  background-color: #d8d8d8;
+  width: 900px;
+  border: 1px solid #7a7a7a;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.diamond-stone-header {
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  border-bottom: 1px solid #a9a9a9;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diamond-stone-header .close-btn {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.diamond-stone-body {
+  padding: 10px;
+  background-color: #efefef;
+}
+
+.diamond-stone-grid-container {
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+.diamond-stone-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.diamond-stone-table th, .diamond-stone-table td {
+  border: 1px solid #dcdcdc;
+  padding: 3px 5px;
+  white-space: nowrap;
+}
+
+.diamond-stone-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: left;
+}
+
+.filter-row th {
+  padding: 0;
+  border-bottom: none;
+}
+
+.grid-filter-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px;
+  border: 1px solid #ccc;
+  height: 20px;
+}
+
+.diamond-stone-table tbody tr {
+  cursor: pointer;
+}
+
+.diamond-stone-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.diamond-stone-table tbody tr:hover {
+  background-color: #e6f3ff;
+}
+
+.diamond-stone-table tbody tr.selected {
+  background-color: #87ceeb; /* Light blue highlight */
+  color: #000;
+}
+
+/* Light yellow for Memo rows in the screenshot */
+.diamond-stone-table tbody tr:nth-child(4) {
+  background-color: #faebd7;
+}
+.diamond-stone-table tbody tr:nth-child(4).selected {
+  background-color: #87ceeb;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.diamond-stone-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #e2e2e2;
+  border-top: 1px solid #a9a9a9;
+}

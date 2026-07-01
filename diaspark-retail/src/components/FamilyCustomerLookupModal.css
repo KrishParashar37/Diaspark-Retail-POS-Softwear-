@@ -1,0 +1,113 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.family-lookup-modal {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 900px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.family-lookup-search-bar {
+  padding: 5px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.family-lookup-search-bar input {
+  font-size: 11px;
+  padding: 2px;
+  border: 1px solid #ccc;
+}
+
+.family-grid-container {
+  background-color: white;
+  height: 350px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.family-lookup-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.family-lookup-table th, .family-lookup-table td {
+  border: 1px solid #eee;
+  padding: 4px 6px;
+  text-align: left;
+}
+
+.family-lookup-table th {
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.family-footer {
+  padding: 8px;
+  background-color: #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.family-action-btn {
+  background: linear-gradient(to bottom, #6b8cff, #4768d6);
+  color: white;
+  border: 1px solid #3652a3;
+  padding: 4px 15px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.family-action-btn:hover {
+  background: linear-gradient(to bottom, #7b9cff, #5778e6);
+}

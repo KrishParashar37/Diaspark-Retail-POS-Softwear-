@@ -1,0 +1,167 @@
+.wishlist-page-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 35px); /* Accounts for footer height */
+  background-color: #f0f0f0;
+}
+
+/* Header from SalesPage is reused */
+
+.wishlist-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.wishlist-top-form {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: white;
+  min-height: 80px;
+}
+
+.wishlist-form-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.wishlist-form-right {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.wl-form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wl-form-group label {
+  font-weight: bold;
+  font-size: 11px;
+  color: #000;
+  min-width: 65px;
+  text-align: right;
+}
+
+.wl-input-with-icon {
+  display: flex;
+  border: 1px solid #aaa;
+  background-color: white;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 22px;
+}
+
+.wl-input-with-icon input {
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  font-size: 12px;
+  width: 200px; /* Default */
+}
+
+.wl-icon-btn {
+  background: linear-gradient(to bottom, #d5e1f0, #80a0cd);
+  border-left: 1px solid #7a9cc6;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.wl-select {
+  border: 1px solid #aaa;
+  padding: 2px 4px;
+  height: 22px;
+  font-size: 12px;
+}
+
+.wl-checkbox-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-left: 75px;
+}
+
+.wl-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #333;
+}
+
+.wishlist-middle-bar {
+  background-color: #ededed;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  padding: 8px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.wishlist-grid-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.wl-grid-header {
+  display: flex;
+  background: linear-gradient(to bottom, #f0f0f0, #b0b0b0);
+  border-bottom: 1px solid #888;
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 11px;
+  color: #000;
+}
+
+.wl-grid-header div {
+  padding: 0 10px;
+}
+
+.wl-grid-body {
+  flex: 1;
+  background-color: #f0f0f0;
+}
+
+.wishlist-footer-section {
+  background-color: #e5e5e5;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.wl-btn-save {
+  background: linear-gradient(to bottom, #6bc06b, #4b9e4b);
+  border: 1px solid #3d8a3d;
+  color: white;
+  font-weight: bold;
+  padding: 6px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.wl-btn-new {
+  background: linear-gradient(to bottom, #f080b0, #d05080);
+  border: 1px solid #b03060;
+  color: white;
+  font-weight: bold;
+  padding: 6px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+}

@@ -1,0 +1,104 @@
+.cp-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1010;
+}
+
+.cp-container {
+  background: #e0e0e0;
+  width: 650px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+}
+
+.cp-header {
+  background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cp-close-x {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cp-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background: #e0e0e0;
+  border-radius: 2px;
+}
+
+.cp-title {
+  margin: 0 0 15px 0;
+  font-size: 15px;
+}
+
+.cp-grid-container {
+  height: 200px;
+  background: white;
+  border: 1px solid #aaa;
+  overflow-y: auto;
+}
+
+.cp-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.cp-grid th {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cp-grid td {
+  border: 1px solid #eee;
+  padding: 6px;
+  height: 25px;
+  text-align: center;
+}
+
+.cp-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.cp-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  border-radius: 3px;
+  padding: 6px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.cp-btn:hover {
+  background: linear-gradient(to bottom, #8bb5ec, #598ddd);
+}

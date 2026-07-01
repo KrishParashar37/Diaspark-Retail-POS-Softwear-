@@ -1,0 +1,306 @@
+.special-detail-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.special-detail-modal {
+  background-color: #fff;
+  width: 950px;
+  max-width: 95%;
+  height: auto;
+  max-height: 95vh;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.special-detail-header {
+  background: linear-gradient(to bottom, #d5e1f0, #bccfe5);
+  padding: 8px 15px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #99a;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.special-detail-body {
+  background-color: #e2e2e2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.main-tabs {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0px;
+}
+
+.main-tab {
+  padding: 5px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  cursor: pointer;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main-tab.active {
+  background-color: #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: -1px;
+}
+
+.special-content-section {
+  display: flex;
+  background-color: #e2e2e2;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-row label {
+  width: 100px;
+  text-align: right;
+  color: #333;
+}
+
+.form-row input[type="text"], .form-row select, .form-row textarea {
+  border: 1px solid #a9a9a9;
+  padding: 3px;
+  font-size: 11px;
+  border-radius: 2px;
+}
+
+.form-row input[type="text"] {
+  flex: 1;
+  max-width: 250px;
+}
+
+.form-row select {
+  flex: 1;
+  max-width: 250px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 110px; /* Align with inputs */
+  margin-top: -5px;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 10;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: auto;
+  text-align: left;
+}
+
+.book-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #7ca7e6, #487ccc);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 10px;
+  border: 1px solid #3461a6;
+  margin-left: 2px;
+}
+
+.magnify-icon {
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.right-column .form-row textarea {
+  flex: 1;
+  height: 35px;
+  resize: none;
+}
+
+.right-column .form-row label {
+  width: 130px;
+}
+
+.calc-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.calc-row input {
+  width: 50px !important;
+}
+
+/* Bottom Section */
+.bottom-section {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.sub-tabs {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0px;
+}
+
+.sub-tab {
+  padding: 5px 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.sub-tab.active {
+  background-color: #e2e2e2;
+}
+
+.components-grid {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  height: 120px;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+.components-header {
+  display: flex;
+  font-weight: bold;
+  color: #888;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.components-row {
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.components-row input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 2px;
+  font-size: 11px;
+}
+
+.components-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px 10px;
+  align-items: flex-end;
+}
+
+.components-actions .checkbox-group {
+  display: flex;
+  gap: 10px;
+  color: #888;
+}
+
+.components-actions .btn-group {
+  display: flex;
+  gap: 5px;
+}
+
+.components-actions button {
+  background: linear-gradient(to bottom, #d5e1f0, #a9c1dd);
+  border: 1px solid #7a9ec6;
+  border-radius: 3px;
+  padding: 3px 15px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.special-detail-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #e2e2e2;
+  border-top: 1px solid #ccc;
+}
+
+.custom-action-btn {
+  padding: 4px 20px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #aaa;
+}
+
+.custom-action-btn.primary {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border-color: #3461a6;
+}
+
+.custom-action-btn.secondary {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border-color: #3461a6;
+}

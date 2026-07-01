@@ -1,0 +1,176 @@
+.printmodal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.printmodal-container {
+  background: #e0e0e0;
+  border: 1px solid #999;
+  border-radius: 3px;
+  width: 520px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 25px;
+}
+
+/* Title Bar */
+.printmodal-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #dedede, #cfcfcf);
+  padding: 6px 10px;
+  border-bottom: 1px solid #aaa;
+  border-radius: 3px 3px 0 0;
+}
+
+.printmodal-title {
+  font-weight: bold;
+  font-size: 13px;
+  color: #000;
+}
+
+.printmodal-close-btn {
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  padding: 0;
+  line-height: 1;
+}
+
+.printmodal-close-btn:hover {
+  color: #000;
+}
+
+/* Options */
+.printmodal-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0 15px;
+  font-size: 13px;
+  color: #000;
+}
+
+.printmodal-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Contact Section */
+.printmodal-contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.printmodal-subtitle {
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.printmodal-form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.printmodal-form-group label {
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 13px;
+  color: #000;
+}
+
+.printmodal-input-row {
+  display: flex;
+  gap: 8px;
+  width: 330px;
+}
+
+.printmodal-input {
+  flex: 1;
+  padding: 4px 6px;
+  border: 1px solid #a0a0a0;
+  font-size: 13px;
+  outline: none;
+}
+
+.printmodal-input.read-only {
+  background-color: #e5e5e5;
+  color: #000;
+}
+
+.printmodal-input.focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 3px rgba(74, 144, 226, 0.5);
+}
+
+.printmodal-placeholder-btn {
+  width: 70px; /* Same width as update btn for alignment */
+}
+
+.printmodal-update-btn {
+  width: 70px;
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.printmodal-update-btn:hover {
+  background: linear-gradient(to bottom, #8bb1e2, #5587d6);
+}
+
+/* Actions */
+.printmodal-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.printmodal-action-row {
+  display: flex;
+  gap: 20px;
+}
+
+.printmodal-action-btn {
+  width: 160px;
+  padding: 6px 0;
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.printmodal-action-btn:hover {
+  background: linear-gradient(to bottom, #8bb1e2, #5587d6);
+}

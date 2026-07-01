@@ -1,0 +1,251 @@
+.custom-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-detail-modal {
+  background-color: #d8dcdb;
+  border-radius: 4px;
+  width: 900px;
+  max-height: 95vh;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #999;
+}
+
+.custom-detail-header {
+  background: linear-gradient(to bottom, #d8e2eb, #aabed5);
+  padding: 5px 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #7c98af;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 13px;
+}
+
+.custom-detail-close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.custom-detail-body {
+  padding: 10px;
+  font-size: 11px;
+  overflow-y: auto;
+}
+
+.custom-top-section {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.custom-form-col {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.custom-form-col-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.custom-form-row {
+  display: flex;
+  align-items: center;
+}
+
+.custom-form-row label {
+  min-width: 90px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.custom-form-row.right-align label {
+  min-width: 60px;
+}
+
+.custom-form-row input[type="text"],
+.custom-form-row select {
+  border: 1px solid #a9a9a9;
+  height: 20px;
+  box-sizing: border-box;
+}
+
+.input-with-icon {
+  display: flex;
+  border: 1px solid #5ab0e2;
+  box-shadow: 0 0 3px #5ab0e2;
+}
+
+.input-with-icon input {
+  border: none !important;
+  height: 18px !important;
+}
+
+.book-icon-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  border: 1px solid #3461a6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  cursor: pointer;
+}
+
+.book-icon-btn.small {
+  width: 18px;
+}
+
+.custom-tabs-container {
+  display: flex;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: -1px;
+}
+
+.custom-tab {
+  padding: 3px 15px;
+  background-color: #d8dcdb;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.custom-tab.active {
+  background-color: #e6e9e8;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #e6e9e8;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.custom-tab-content {
+  border: 1px solid #aaa;
+  background-color: #e6e9e8;
+  padding: 10px;
+}
+
+.metal-section {
+  margin-bottom: 15px;
+}
+
+.metal-header, .diamond-header {
+  display: flex;
+  background: linear-gradient(to bottom, #e0e0e0, #c0c0c0);
+  border: 1px solid #a9a9a9;
+  font-weight: bold;
+  text-align: center;
+}
+
+.metal-header > div, .diamond-header > div {
+  padding: 2px;
+  border-right: 1px solid #a9a9a9;
+}
+
+.metal-header > div:last-child, .diamond-header > div:last-child {
+  border-right: none;
+}
+
+.metal-row, .diamond-row {
+  display: flex;
+  margin-top: 2px;
+}
+
+.metal-row select, .metal-row input,
+.diamond-row select, .diamond-row input {
+  border: 1px solid #a9a9a9;
+  height: 20px;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.minus-icon {
+  width: 20px;
+  color: red;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.custom-detail-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-top: 1px solid #aaa;
+}
+
+.custom-action-btn {
+  padding: 4px 20px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.custom-action-btn.primary {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+}
+
+.custom-action-btn.secondary {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+}
+
+.other-tab {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.other-tab-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.other-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-field label {
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+.other-field textarea {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #a9a9a9;
+  resize: none;
+}

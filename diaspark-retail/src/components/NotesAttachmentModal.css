@@ -1,0 +1,124 @@
+.notes-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.notes-modal {
+  width: 900px;
+  background-color: #f0f0f0;
+  border: 1px solid #999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-header {
+  background: linear-gradient(to bottom, #d0e0f0, #a0c0e0);
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  font-size: 13px;
+}
+
+.notes-close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.notes-body {
+  padding: 15px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notes-form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notes-form-row.align-top {
+  align-items: flex-start;
+}
+
+.notes-form-row label {
+  min-width: 60px;
+  font-size: 12px;
+}
+
+.notes-input {
+  flex: 1;
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+
+.notes-textarea {
+  flex: 1;
+  height: 80px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.notes-browse-btn, .notes-action-btn, .notes-close-action-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  padding: 4px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.notes-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 5px 0;
+}
+
+.notes-grid {
+  background-color: white;
+  border: 1px solid #ccc;
+  min-height: 150px;
+}
+
+.notes-grid-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 2fr 3fr 0.5fr;
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.notes-grid-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 2fr 3fr 0.5fr;
+  padding: 5px;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.notes-footer {
+  padding: 15px;
+  background-color: #e5e5e5;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+}

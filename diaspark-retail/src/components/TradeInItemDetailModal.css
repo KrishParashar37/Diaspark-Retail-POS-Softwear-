@@ -1,0 +1,126 @@
+.trade-item-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.trade-item-modal {
+  width: 550px;
+  background-color: #f0f0f0;
+  border: 1px solid #777;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.trade-item-header {
+  background: linear-gradient(to bottom, #d5e1f0, #a0badb);
+  padding: 8px 12px;
+  font-weight: bold;
+  color: #1a4371;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #7a9cc6;
+}
+
+.trade-item-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1a4371;
+  line-height: 1;
+}
+
+.trade-item-body {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #efefef;
+}
+
+.trade-form-row {
+  display: flex;
+  align-items: center;
+}
+
+.trade-form-row.align-top {
+  align-items: flex-start;
+}
+
+.trade-form-row label {
+  width: 130px;
+  text-align: right;
+  margin-right: 15px;
+  color: #000;
+}
+
+.trade-form-row select {
+  width: 150px;
+  padding: 2px 4px;
+  border: 1px solid #aaa;
+}
+
+.trade-form-row input[type="text"] {
+  padding: 2px 4px;
+  border: 1px solid #aaa;
+}
+
+.trade-desc-container {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.trade-desc-container textarea {
+  width: 250px;
+  height: 80px;
+  border: 1px solid #aaa;
+  resize: none;
+  padding: 4px;
+}
+
+.trade-camera-icon {
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.trade-item-footer {
+  background-color: #d8d8d8;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-top: 1px solid #bbb;
+}
+
+.trade-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  border: 1px solid #3461a6;
+  color: white;
+  padding: 6px 30px;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset 0px 1px 1px rgba(255,255,255,0.3);
+}
+
+.trade-btn:hover {
+  background: linear-gradient(to bottom, #6998d6, #3b6bba);
+}

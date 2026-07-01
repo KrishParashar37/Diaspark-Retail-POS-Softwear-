@@ -1,0 +1,106 @@
+.gcl-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.gcl-container {
+  background: #e0e0e0;
+  width: 500px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+}
+
+.gcl-header {
+  background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.gcl-close-x {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gcl-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gcl-grid-container {
+  background: white;
+  border: 1px solid #aaa;
+  height: 250px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.gcl-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.gcl-grid th {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+}
+
+.gcl-grid td {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.gcl-grid tr.selected {
+  background-color: #d0e4f5;
+}
+
+.gcl-grid tr:hover {
+  background-color: #f0f8ff;
+  cursor: pointer;
+}
+
+.gcl-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+
+.gcl-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  border-radius: 3px;
+  padding: 5px 25px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.gcl-btn:hover {
+  background: linear-gradient(to bottom, #8bb5ec, #598ddd);
+}

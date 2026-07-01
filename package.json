@@ -1,0 +1,16 @@
+{
+  "name": "diaspark-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "cd backend-python && python app.py",
+    "start-frontend": "cd diaspark-retail && npm run dev",
+    "install-all": "npm install && cd diaspark-retail && npm install"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.15.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

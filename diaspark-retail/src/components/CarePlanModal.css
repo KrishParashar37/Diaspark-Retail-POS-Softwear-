@@ -1,0 +1,240 @@
+/* ── Care Plan Modal (JM Warranty Plans) ── */
+
+.careplan-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.careplan-modal {
+  background: #f0f0f0;
+  border: 2px solid #888;
+  border-radius: 4px;
+  width: 620px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title Bar */
+.careplan-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #e8e8e8, #c8c8c8);
+  padding: 6px 10px;
+  border-bottom: 1px solid #999;
+  border-radius: 4px 4px 0 0;
+}
+
+.careplan-title {
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+}
+
+.careplan-close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.careplan-close-btn:hover {
+  color: #c00;
+}
+
+/* Header with Logo */
+.careplan-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.careplan-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.careplan-logo-icon {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1a3a5c;
+  line-height: 1;
+  font-family: serif;
+}
+
+.careplan-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.careplan-logo-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a3a5c;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  line-height: 1.1;
+}
+
+.careplan-logo-tagline {
+  font-size: 9px;
+  color: #1a3a5c;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.careplan-plan-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.careplan-plan-separator {
+  color: #999;
+}
+
+/* Table Container */
+.careplan-table-container {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 420px;
+  margin: 10px 15px;
+  border: 1px solid #999;
+  background: white;
+}
+
+.careplan-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.careplan-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.careplan-table th {
+  background: linear-gradient(to bottom, #f0f0f0, #d8d8d8);
+  padding: 6px 12px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+  border-bottom: 2px solid #999;
+  border-right: 1px solid #ccc;
+}
+
+.careplan-th-plan {
+  width: 35%;
+}
+
+.careplan-th-duration {
+  width: 35%;
+}
+
+.careplan-th-price {
+  width: 30%;
+  text-align: right !important;
+}
+
+.careplan-table td {
+  padding: 5px 12px;
+  border-bottom: 1px solid #e8e8e8;
+  color: #333;
+}
+
+.careplan-td-plan {
+  font-weight: 500;
+  color: #333;
+}
+
+.careplan-td-duration {
+  color: #555;
+}
+
+.careplan-td-price {
+  text-align: right;
+  font-weight: 500;
+  color: #333;
+}
+
+.careplan-row {
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.careplan-row:hover {
+  background-color: #e8f0ff;
+}
+
+.careplan-row.selected {
+  background-color: #3366cc;
+  color: white;
+}
+
+.careplan-row.selected td {
+  color: white;
+}
+
+/* Footer */
+.careplan-footer {
+  display: flex;
+  gap: 10px;
+  padding: 12px 15px;
+  border-top: 1px solid #bbb;
+  background: #f0f0f0;
+  border-radius: 0 0 4px 4px;
+}
+
+.careplan-ok-btn,
+.careplan-cancel-btn {
+  padding: 5px 25px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.careplan-ok-btn {
+  background: linear-gradient(to bottom, #5b9bd5, #2a6cb7);
+  color: white;
+  border: 1px solid #1f5a9e;
+}
+
+.careplan-ok-btn:hover {
+  background: linear-gradient(to bottom, #6ba8e0, #3578c4);
+}
+
+.careplan-cancel-btn {
+  background: linear-gradient(to bottom, #e8e8e8, #c0c0c0);
+  color: #333;
+  border: 1px solid #999;
+}
+
+.careplan-cancel-btn:hover {
+  background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+}

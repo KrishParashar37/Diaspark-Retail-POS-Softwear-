@@ -1,0 +1,161 @@
+.cc-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1010;
+}
+
+.cc-container {
+  background: #e0e0e0;
+  width: 750px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+}
+
+.cc-header {
+  background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cc-close-x {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cc-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #d4d4d4;
+  margin: 15px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+}
+
+.cc-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cc-radio {
+  display: flex;
+  align-items: center;
+  color: green;
+  font-weight: bold;
+  font-size: 13px;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.cc-input-row, .cc-scan-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.cc-scan-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.cc-scan-row label {
+  font-weight: bold;
+}
+
+.cc-scan-input {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #aaa;
+}
+
+.cc-input-row label {
+  width: 80px;
+  text-align: right;
+}
+
+.cc-input-row input, .cc-input-row select {
+  padding: 3px;
+  border: 1px solid #aaa;
+}
+
+.cc-amount-input {
+  border: 1px solid #5ab0e2 !important;
+  box-shadow: 0 0 3px #5ab0e2;
+  width: 100px;
+}
+
+.cc-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  border-radius: 3px;
+  padding: 6px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.cc-btn:hover {
+  background: linear-gradient(to bottom, #8bb5ec, #598ddd);
+}
+
+.cc-grid-container {
+  height: 150px;
+  background: white;
+  border: 1px solid #aaa;
+  overflow-y: auto;
+}
+
+.cc-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.cc-grid th {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cc-grid td {
+  border: 1px solid #eee;
+  padding: 4px;
+  height: 20px;
+  text-align: center;
+}
+
+.cc-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc-total {
+  font-size: 12px;
+  margin-left: 150px;
+}

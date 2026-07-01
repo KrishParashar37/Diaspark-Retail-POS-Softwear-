@@ -1,0 +1,73 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.transaction-lookup-modal {
+  background-color: #e5edf5;
+  border: 1px solid #7aa4db;
+  border-radius: 4px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.transaction-search-row {
+  display: flex;
+  padding: 5px 10px;
+  background-color: #f5f8fc;
+  gap: 2px;
+}
+
+.transaction-search-input {
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  font-size: 12px;
+}
+
+.transaction-grid-container {
+  padding: 0 10px 10px 10px;
+  height: 350px;
+}
+
+.transaction-lookup-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.transaction-lookup-table th {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.transaction-lookup-table td {
+  border: 1px solid #eee;
+  padding: 4px 6px;
+}
+
+.transaction-lookup-table tbody {
+  display: block;
+  max-height: 310px;
+  overflow-y: scroll;
+}
+
+.transaction-lookup-table thead, .transaction-lookup-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}

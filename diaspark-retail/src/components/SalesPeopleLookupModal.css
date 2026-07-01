@@ -1,0 +1,114 @@
+.splookup-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* higher than SalespersonModal */
+}
+
+.splookup-modal {
+  width: 600px;
+  background-color: #e8e8e8;
+  border: 1px solid #777;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.splookup-header {
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  padding: 6px 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #999;
+  color: #333;
+}
+
+.splookup-close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.splookup-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.splookup-controls {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 5px;
+}
+
+.splookup-grid-container {
+  background-color: white;
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+}
+
+.splookup-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.splookup-table th, .splookup-table td {
+  border: 1px solid #e0e0e0;
+  padding: 4px 6px;
+  text-align: left;
+}
+
+.splookup-table th {
+  background-color: white;
+  font-weight: bold;
+  color: #111;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ccc;
+  z-index: 1;
+}
+
+.splookup-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.splookup-table tr.selected {
+  background-color: #e0f0fa;
+}
+
+.splookup-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-top: 1px solid #bbb;
+  background-color: #e8e8e8;
+}
+
+.splookup-btn {
+  background: linear-gradient(to bottom, #7ca0e6, #507bce);
+  border: 1px solid #385b9e;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset 0px 1px 1px rgba(255,255,255,0.7);
+}
+
+.splookup-btn:hover {
+  background: linear-gradient(to bottom, #8bb0f6, #608bde);
+}

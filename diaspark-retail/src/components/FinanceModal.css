@@ -1,0 +1,105 @@
+.fm-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1010;
+}
+
+.fm-container {
+  background: #e0e0e0;
+  width: 450px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+}
+
+.fm-header {
+  background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.fm-close-x {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fm-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #b0b0b0;
+  margin: 15px;
+  background: #d4d4d4;
+  border-radius: 2px;
+}
+
+.fm-title {
+  text-align: center;
+  margin: 0 0 15px 0;
+  font-size: 16px;
+}
+
+.fm-form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fm-form-group label {
+  width: 130px;
+  text-align: right;
+  font-size: 13px;
+}
+
+.fm-form-group input, .fm-form-group select {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid #aaa;
+}
+
+.fm-amount-input {
+  border: 1px solid #5ab0e2 !important;
+  box-shadow: 0 0 3px #5ab0e2;
+  flex: none !important;
+  width: 100px;
+}
+
+.fm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.fm-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  color: white;
+  border: 1px solid #3461a6;
+  border-radius: 3px;
+  padding: 6px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.fm-btn:hover {
+  background: linear-gradient(to bottom, #8bb5ec, #598ddd);
+}

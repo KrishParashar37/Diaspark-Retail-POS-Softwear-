@@ -1,0 +1,180 @@
+.tracking-page-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* Header */
+.tracking-header {
+  background: linear-gradient(to bottom, #1a6fc4, #0b4588);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 0;
+  height: 40px;
+  border-bottom: 2px solid #5a9bd4;
+}
+.tracking-header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+}
+.tracking-header-right {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Tabs */
+.tracking-main-tabs {
+  display: flex;
+  background-color: #fff;
+  padding-left: 10px;
+  border-bottom: 1px solid #ccc;
+  gap: 15px;
+  padding-top: 5px;
+  align-items: center;
+}
+.tracking-tab-separator {
+  color: #ccc;
+  font-size: 14px;
+}
+.tracking-tab {
+  padding: 5px 15px;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+.tracking-tab.active {
+  color: #2061aa;
+  border-bottom: 3px solid #2061aa;
+}
+
+/* Action Bar */
+.tracking-action-bar {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  gap: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.tracking-btn {
+  background: linear-gradient(to bottom, #7aa4db, #487ccc);
+  border: 1px solid #3461a6;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.tracking-btn-disabled {
+  background: #e0e0e0;
+  color: #a0a0a0;
+  border: 1px solid #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Grid */
+.tracking-grid-section {
+  flex: 1;
+  background-color: #fff;
+  border-bottom: 2px solid #999;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.tracking-grid-header {
+  display: flex;
+  background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
+  border-bottom: 1px solid #999;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.tracking-grid-header > div {
+  padding: 0 5px;
+  border-right: 1px solid #ccc;
+}
+.tracking-grid-filter-row {
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid #999;
+  padding: 2px 0;
+}
+.tracking-grid-filter-row > div {
+  padding: 0 2px;
+  border-right: 1px solid #ccc;
+}
+.tracking-grid-filter-row input {
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 16px;
+}
+.tracking-grid-body {
+  height: 250px;
+  overflow-y: auto;
+}
+.tracking-grid-row {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 4px 0;
+}
+.tracking-grid-row > div {
+  padding: 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Payment Detail */
+.tracking-payment-section {
+  height: 150px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.tracking-payment-header-tabs {
+  display: flex;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+}
+.tracking-payment-tab {
+  padding: 4px 15px;
+  font-weight: bold;
+  background: #e0e0e0;
+  border: 1px solid #999;
+  border-bottom: none;
+  margin-top: 5px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  cursor: pointer;
+  margin-right: 2px;
+}
+.tracking-payment-tab.active {
+  background: white;
+}
+.tracking-payment-grid {
+  flex: 1;
+}
+.tracking-payment-grid-header {
+  display: flex;
+  background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
+  border-bottom: 1px solid #999;
+  font-weight: bold;
+  padding: 4px 5px;
+}
+.tracking-payment-grid-header > div {
+  padding: 0 5px;
+  border-right: 1px solid #ccc;
+}
+.tracking-payment-grid-body {
+  height: 100px;
+}

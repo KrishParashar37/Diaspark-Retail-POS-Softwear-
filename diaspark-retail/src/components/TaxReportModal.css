@@ -1,0 +1,131 @@
+.tax-report-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.tax-report-modal {
+  background-color: white;
+  border-radius: 4px;
+  width: 420px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.tax-report-header {
+  background-color: #f0f4f8;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c0d0e0;
+  font-weight: bold;
+  font-size: 13px;
+  color: #003366;
+}
+
+.tax-report-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.tax-report-body {
+  padding: 15px;
+  font-size: 12px;
+}
+
+.tax-report-col-labels {
+  display: flex;
+  margin-left: 120px;
+  margin-bottom: 10px;
+}
+
+.tax-report-col-labels span {
+  width: 120px;
+  text-align: center;
+}
+
+.tax-report-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tax-report-label {
+  width: 90px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.tax-report-inputs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tax-report-checkbox {
+  margin: 0 5px;
+}
+
+.tax-report-input {
+  width: 110px;
+  padding: 3px;
+  border: 1px solid #a0a0a0;
+  box-sizing: border-box;
+}
+
+.tax-report-select {
+  width: 225px;
+  padding: 3px;
+  border: 1px solid #a0a0a0;
+  margin-left: 5px;
+}
+
+.tax-report-radio-group {
+  display: flex;
+  gap: 15px;
+  margin-left: 5px;
+}
+
+.tax-report-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.tax-report-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.tax-report-btn {
+  padding: 5px 20px;
+  background: linear-gradient(to bottom, #7aa6f2, #4779d1);
+  color: white;
+  border: 1px solid #2d559c;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.tax-report-btn:hover {
+  background: linear-gradient(to bottom, #8db3f7, #5c8ae6);
+}
