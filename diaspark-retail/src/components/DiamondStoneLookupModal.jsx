@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './DiamondStoneLookupModal.css';
 
@@ -11,7 +12,7 @@ const DiamondStoneLookupModal = ({ onClose }) => {
   });
 
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/items')
+    fetch(`${API_BASE_URL}/api/items`)
       .then(res => res.json())
       .then(data => {
         // Map real POSDB product data to Diamond & Stone columns

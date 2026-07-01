@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './DatabaseViewer.css';
 
@@ -30,7 +31,7 @@ const DatabaseViewer = () => {
       const activeTableInfo = tables.find(t => t.name === activeTab);
       
       try {
-        const response = await fetch(`http://localhost:5001${activeTableInfo.endpoint}`);
+        const response = await fetch(`${API_BASE_URL}${activeTableInfo.endpoint}`);
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

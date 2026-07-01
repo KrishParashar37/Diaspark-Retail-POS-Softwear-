@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './LanguageLookupModal.css';
 
@@ -12,7 +13,7 @@ const LanguageLookupModal = ({ onClose, onSelect }) => {
   const [filteredData, setFilteredData] = useState([]);
 
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/languages')
+    fetch(`${API_BASE_URL}/api/languages`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {

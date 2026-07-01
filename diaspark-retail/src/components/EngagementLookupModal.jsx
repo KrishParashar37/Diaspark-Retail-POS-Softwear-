@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './EngagementLookupModal.css';
 
@@ -11,7 +12,7 @@ const EngagementLookupModal = ({ onClose, onSelect }) => {
   const [filteredData, setFilteredData] = useState([]);
 
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/engagements')
+    fetch(`${API_BASE_URL}/api/engagements`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {

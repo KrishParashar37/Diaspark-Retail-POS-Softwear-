@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 
 function EodSummaryModal({ isOpen, onClose, defaultDate }) {
@@ -13,8 +14,8 @@ function EodSummaryModal({ isOpen, onClose, defaultDate }) {
   if (!isOpen) return null;
 
   const generateExcel = () => {
-    const summaryUrl = `http://localhost:5001/api/reports/tender-summary${useDate && dateStr ? '?date=' + dateStr : ''}`;
-    const detailsUrl = `http://localhost:5001/api/reports/tender-details${useDate && dateStr ? '?date=' + dateStr : ''}`;
+    const summaryUrl = `${API_BASE_URL}/api/reports/tender-summary${useDate && dateStr ? '?date=' + dateStr : ''}`;
+    const detailsUrl = `${API_BASE_URL}/api/reports/tender-details${useDate && dateStr ? '?date=' + dateStr : ''}`;
 
     Promise.all([
       fetch(summaryUrl).then(res => res.json()),

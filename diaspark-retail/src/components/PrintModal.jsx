@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './PrintModal.css';
 import { printReceipt } from '../utils/printReceipt';
@@ -27,7 +28,7 @@ export default function PrintModal({ onClose, onNew, customerEmail, customerCell
         email: emailTo,
       };
       
-      const res = await fetch(`http://localhost:5001/api/customers/${custId}`, {
+      const res = await fetch(`${API_BASE_URL}/api/customers/${custId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedCustomer)
@@ -56,7 +57,7 @@ export default function PrintModal({ onClose, onNew, customerEmail, customerCell
     }
     setIsEmailing(true);
     try {
-      const res = await fetch('http://localhost:5001/api/send_email', {
+      const res = await fetch(`${API_BASE_URL}/api/send_email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './CustomerInfoView.css';
 import EditCustomerModal from './EditCustomerModal';
@@ -22,7 +23,7 @@ function CustomerInfoView({ onSelectCustomer, onAction }) {
   });
 
   useEffect(() => {
-    fetch('http://localhost:5001/api/salespersons')
+    fetch(`${API_BASE_URL}/api/salespersons`)
       .then(res => res.json())
       .then(data => setSalespersonsList(data))
       .catch(err => console.error("Error fetching salespersons:", err));
@@ -56,8 +57,8 @@ function CustomerInfoView({ onSelectCustomer, onAction }) {
       if (salesperson.trim()) params.append('salesperson', salesperson.trim());
 
       const url = params.toString()
-        ? `http://localhost:5001/api/customers/search?${params.toString()}`
-        : 'http://localhost:5001/api/customers';
+        ? `${API_BASE_URL}/api/customers/search?${params.toString()}`
+        : `${API_BASE_URL}/api/customers`;
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();

@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './SkuLookupModal.css';
 
@@ -20,7 +21,7 @@ function SkuLookupModal({ onClose, onSelect }) {
   const fetchSkus = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5001/api/skus');
+      const response = await fetch(`${API_BASE_URL}/api/skus`);
       if (response.ok) {
         const data = await response.json();
         setAllData(data);

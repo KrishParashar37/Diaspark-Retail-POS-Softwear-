@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './LoginPage.css';
 
@@ -22,7 +23,7 @@ export default function LoginPage({ onLogin }) {
     setLoading(true);
     
     try {
-      const response = await fetch('http://localhost:5001/api/login', {
+      const response = await fetch(`${API_BASE_URL}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -50,7 +51,7 @@ export default function LoginPage({ onLogin }) {
 
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5001/api/login/google', {
+      const response = await fetch(`${API_BASE_URL}/api/login/google`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: userEmail })

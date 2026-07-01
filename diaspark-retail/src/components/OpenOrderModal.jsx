@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './OpenOrderModal.css';
 
@@ -20,7 +21,7 @@ function OpenOrderModal({ onClose }) {
     try {
       const runDate = new Date().toLocaleDateString('en-US');
       
-      let url = `http://localhost:5001/api/reports/open-orders?exportFormat=${encodeURIComponent(exportFormat)}`;
+      let url = `${API_BASE_URL}/api/reports/open-orders?exportFormat=${encodeURIComponent(exportFormat)}`;
       
       if (useOrderNo && orderStart && orderEnd) {
         url += `&orderStart=${encodeURIComponent(orderStart)}&orderEnd=${encodeURIComponent(orderEnd)}`;

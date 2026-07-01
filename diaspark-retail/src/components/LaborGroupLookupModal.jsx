@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './LaborLookupModal.css';
 
@@ -6,7 +7,7 @@ const LaborGroupLookupModal = ({ onClose, onSelect }) => {
   const [laborGroups, setLaborGroups] = useState([]);
 
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/labor')
+    fetch(`${API_BASE_URL}/api/labor`)
       .then(res => {
         if (!res.ok) throw new Error("Not found");
         return res.json();

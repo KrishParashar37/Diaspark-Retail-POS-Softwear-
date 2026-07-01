@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './TermLookupModal.css';
 
@@ -7,7 +8,7 @@ function TermLookupModal({ onClose, onSelect }) {
   const [MOCK_TERMS, setTerms] = useState([]);
   
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/terms')
+    fetch(`${API_BASE_URL}/api/terms`)
       .then(res => res.json())
       .then(data => setTerms(data))
       .catch(err => console.error("Failed to fetch terms:", err));

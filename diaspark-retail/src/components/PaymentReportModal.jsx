@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './PaymentReportModal.css';
 
@@ -21,7 +22,7 @@ function PaymentReportModal({ onClose }) {
         fetchEnd = endDate;
       }
 
-      let url = `http://localhost:5001/api/reports/payments?reportType=${encodeURIComponent(reportType)}`;
+      let url = `${API_BASE_URL}/api/reports/payments?reportType=${encodeURIComponent(reportType)}`;
       if (fetchStart && fetchEnd) {
         url += `&startDate=${encodeURIComponent(fetchStart)}&endDate=${encodeURIComponent(fetchEnd)}`;
       }

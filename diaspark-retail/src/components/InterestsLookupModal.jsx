@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './DemographicLookupModal.css';
 
@@ -9,13 +10,13 @@ const InterestsLookupModal = ({ lookupType, onClose, onSelect }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   React.useEffect(() => {
-    let endpoint = 'http://localhost:5001/api/vendors';
+    let endpoint = `${API_BASE_URL}/api/vendors`;
     if (lookupType?.includes('Type') || lookupType?.includes('Category')) {
-      endpoint = 'http://localhost:5001/api/categories';
+      endpoint = `${API_BASE_URL}/api/categories`;
     } else if (lookupType?.includes('Brand')) {
-      endpoint = 'http://localhost:5001/api/vendors';
+      endpoint = `${API_BASE_URL}/api/vendors`;
     } else if (lookupType === 'Interests') {
-      endpoint = 'http://localhost:5001/api/interests';
+      endpoint = `${API_BASE_URL}/api/interests`;
     }
 
     fetch(endpoint)

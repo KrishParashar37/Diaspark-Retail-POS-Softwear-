@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react'
 import './SalesPage.css'
 import './DatePicker.css'
@@ -66,7 +67,7 @@ function SalesPage({ onNavigate, initialOption = 'Sales' }) {
 
   const fetchNextTransId = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/transactions/next');
+      const response = await fetch(`${API_BASE_URL}/api/transactions/next`);
       if (response.ok) {
         const data = await response.json();
         setNextTransId(prev => {
@@ -124,7 +125,7 @@ function SalesPage({ onNavigate, initialOption = 'Sales' }) {
 
   const handleSaveInlineCustomer = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/api/customers/${editedCustomer.customerId}`, {
+      const response = await fetch(`${API_BASE_URL}/api/customers/${editedCustomer.customerId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(editedCustomer),
@@ -145,7 +146,7 @@ function SalesPage({ onNavigate, initialOption = 'Sales' }) {
 
   useEffect(() => {
     if (customer && customer.id) {
-      fetch(`http://localhost:5001/api/customer-sales/${customer.id}`)
+      fetch(`${API_BASE_URL}/api/customer-sales/${customer.id}`)
         .then(res => res.json())
         .then(data => setCustomerTotalSales(data.totalSalesAmount || 0))
         .catch(err => console.error("Error fetching customer sales:", err));
@@ -157,7 +158,7 @@ function SalesPage({ onNavigate, initialOption = 'Sales' }) {
   const [salespersonsList, setSalespersonsList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5001/api/salespersons')
+    fetch(`${API_BASE_URL}/api/salespersons`)
       .then(res => res.json())
       .then(data => setSalespersonsList(data))
       .catch(err => console.error("Error fetching salespersons:", err));
@@ -172,7 +173,7 @@ function SalesPage({ onNavigate, initialOption = 'Sales' }) {
   // Fetch catalog items when SKU search text changes
   useEffect(() => {
     if (skuSearchText.length >= 1) {
-      fetch(`http://localhost:5001/api/catalog-items?search=${encodeURIComponent(skuSearchText)}`)
+      fetch(`${API_BASE_URL}/api/catalog-items?search=${encodeURIComponent(skuSearchText)}`)
         .then(res => res.json())
         .then(data => {
           if (Array.isArray(data)) {
@@ -203,7 +204,7 @@ function SalesPage({ onNavigate, initialOption = 'Sales' }) {
 
   const handleBarcodeEnter = (e) => {
     if (e.key === 'Enter' && barcodeSearchText.trim() !== '') {
-      fetch(`http://localhost:5001/api/catalog-items?search=${encodeURIComponent(barcodeSearchText)}`)
+      fetch(`${API_BASE_URL}/api/catalog-items?search=${encodeURIComponent(barcodeSearchText)}`)
         .then(res => res.json())
         .then(data => {
           if (Array.isArray(data) && data.length > 0) {
@@ -1757,7 +1758,7 @@ function SalesPage({ onNavigate, initialOption = 'Sales' }) {
                     return;
                   }
                   try {
-                    const res = await fetch('http://localhost:5001/api/transactions', {
+                    const res = await fetch(`${API_BASE_URL}/api/transactions`, {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({
@@ -1781,7 +1782,7 @@ function SalesPage({ onNavigate, initialOption = 'Sales' }) {
                       for (const item of gridData) {
                         if (item.specialOrderDetails) {
                           try {
-                            await fetch('http://localhost:5001/api/special-orders', {
+                            await fetch(`${API_BASE_URL}/api/special-orders`, {
                               method: 'POST',
                               headers: { 'Content-Type': 'application/json' },
                               body: JSON.stringify({

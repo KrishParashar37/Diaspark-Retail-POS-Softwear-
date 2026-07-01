@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './SalesPage.css';
 import PrintEndOfDayCloseoutModal from './PrintEndOfDayCloseoutModal';
@@ -26,7 +27,7 @@ function EndOfDayCloseoutPage({ onNavigate }) {
   const [tenderSummary, setTenderSummary] = useState([]);
 
   const fetchTenderSummary = (targetDate) => {
-    const url = targetDate ? `http://localhost:5001/api/reports/tender-summary?date=${targetDate}` : 'http://localhost:5001/api/reports/tender-summary';
+    const url = targetDate ? `${API_BASE_URL}/api/reports/tender-summary?date=${targetDate}` : `${API_BASE_URL}/api/reports/tender-summary`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -72,7 +73,7 @@ function EndOfDayCloseoutPage({ onNavigate }) {
       overShort: overShort
     };
 
-    fetch('http://localhost:5001/api/end-of-day-closeout', {
+    fetch(`${API_BASE_URL}/api/end-of-day-closeout`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

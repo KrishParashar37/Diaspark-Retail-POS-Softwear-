@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './TaxReportModal.css';
 
@@ -29,7 +30,7 @@ function TaxReportModal({ onClose }) {
     try {
       const runDate = new Date().toLocaleDateString('en-US');
       
-      let url = `http://localhost:5001/api/reports/tax?reportFormat=${encodeURIComponent(reportFormat)}`;
+      let url = `${API_BASE_URL}/api/reports/tax?reportFormat=${encodeURIComponent(reportFormat)}`;
       
       if (useStore && storeStart && storeEnd) {
         url += `&storeStart=${encodeURIComponent(storeStart)}&storeEnd=${encodeURIComponent(storeEnd)}`;

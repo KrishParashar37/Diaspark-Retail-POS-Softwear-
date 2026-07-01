@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './TransactionLookupModal.css';
 
@@ -8,7 +9,7 @@ function TransactionLookupModal({ onClose, onSelect }) {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const res = await fetch('http://localhost:5001/api/transactions');
+        const res = await fetch(`${API_BASE_URL}/api/transactions`);
         if (res.ok) {
           const result = await res.json();
           setData(result);

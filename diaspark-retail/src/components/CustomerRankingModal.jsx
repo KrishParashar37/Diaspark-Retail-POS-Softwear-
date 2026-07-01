@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './CustomerRankingModal.css';
 
@@ -11,7 +12,7 @@ function CustomerRankingModal({ onClose }) {
     try {
       const runDate = new Date().toLocaleDateString('en-US');
       
-      let url = `http://localhost:5001/api/reports/customer-ranking?reportFormat=${encodeURIComponent(reportFormat)}&top=${top}`;
+      let url = `${API_BASE_URL}/api/reports/customer-ranking?reportFormat=${encodeURIComponent(reportFormat)}&top=${top}`;
       
       if (date) {
         url += `&date=${encodeURIComponent(date)}`;

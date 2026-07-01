@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './ItemCategoryLookupModal.css';
 
@@ -16,7 +17,7 @@ function ItemCategoryLookupModal({ onClose, onSelect }) {
   const fetchCategories = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5001/api/categories');
+      const response = await fetch(`${API_BASE_URL}/api/categories`);
       if (response.ok) {
         const data = await response.json();
         setCategories(data);

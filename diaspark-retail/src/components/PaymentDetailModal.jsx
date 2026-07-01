@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 
 function PaymentDetailModal({ isOpen, onClose, paymentType, closeoutDate }) {
@@ -8,7 +9,7 @@ function PaymentDetailModal({ isOpen, onClose, paymentType, closeoutDate }) {
     if (isOpen && paymentType) {
       // Map frontend UI names if needed, or pass exact paymentType
       const fetchType = paymentType.replace('ZON-', ''); 
-      const url = `http://localhost:5001/api/reports/tender-details?payment_type=${fetchType}${closeoutDate ? '&date=' + closeoutDate : ''}`;
+      const url = `${API_BASE_URL}/api/reports/tender-details?payment_type=${fetchType}${closeoutDate ? '&date=' + closeoutDate : ''}`;
       
       fetch(url)
         .then(res => res.json())

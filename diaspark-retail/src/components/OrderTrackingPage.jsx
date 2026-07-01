@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react'
 import './OrderTrackingPage.css'
 
@@ -23,7 +24,7 @@ function OrderTrackingPage({ onNavigate }) {
 
   const fetchData = (tab) => {
     const currentTab = typeof tab === 'string' ? tab : activeTab;
-    fetch(`http://localhost:5001/api/orders?orderType=${encodeURIComponent(currentTab)}`)
+    fetch(`${API_BASE_URL}/api/orders?orderType=${encodeURIComponent(currentTab)}`)
       .then(res => res.json())
       .then(data => {
         setTrackingData(data);
@@ -86,7 +87,7 @@ function OrderTrackingPage({ onNavigate }) {
     }
     
     try {
-      const res = await fetch(`http://localhost:5001/api/orders/${order.id}/finalize`, { method: 'PUT' });
+      const res = await fetch(`${API_BASE_URL}/api/orders/${order.id}/finalize`, { method: 'PUT' });
       if (res.ok) {
         alert(`Successfully finalized Order: ${order.special}`);
         fetchData();

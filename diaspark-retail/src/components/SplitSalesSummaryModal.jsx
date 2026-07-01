@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './SplitSalesSummaryModal.css';
 
@@ -20,7 +21,7 @@ function SplitSalesSummaryModal({ onClose }) {
     const endStr = useDate && endDate ? endDate : runDate;
 
     try {
-      let url = `http://localhost:5001/api/reports/split-sales-summary?reportType=${encodeURIComponent(reportType)}`;
+      let url = `${API_BASE_URL}/api/reports/split-sales-summary?reportType=${encodeURIComponent(reportType)}`;
       if (useDate && startDate && endDate) {
         url += `&startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
       }

@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './ClosedSalesModal.css';
 
@@ -21,7 +22,7 @@ function ClosedSalesModal({ onClose }) {
     try {
       const runDate = new Date().toLocaleDateString('en-US');
       
-      let url = `http://localhost:5001/api/reports/closed-sales?reportType=${encodeURIComponent(reportType)}`;
+      let url = `${API_BASE_URL}/api/reports/closed-sales?reportType=${encodeURIComponent(reportType)}`;
       if (useSalesNo && salesStart && salesEnd) {
         url += `&salesStart=${encodeURIComponent(salesStart)}&salesEnd=${encodeURIComponent(salesEnd)}`;
       }

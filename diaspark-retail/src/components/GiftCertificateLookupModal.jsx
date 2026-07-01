@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './GiftCertificateLookupModal.css';
 
@@ -6,7 +7,7 @@ function GiftCertificateLookupModal({ onClose, onSelect }) {
   const [DUMMY_CERTIFICATES, setCertificates] = useState([]);
   
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/giftcertificates')
+    fetch(`${API_BASE_URL}/api/giftcertificates`)
       .then(res => res.json())
       .then(data => setCertificates(data))
       .catch(err => console.error("Failed to fetch gift certificates:", err));

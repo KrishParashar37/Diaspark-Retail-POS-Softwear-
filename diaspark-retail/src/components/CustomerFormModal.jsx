@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './CustomerFormModal.css';
 
@@ -29,7 +30,7 @@ function CustomerFormModal({ mode, initialData, onClose, onSaved }) {
 
   const handleSave = async () => {
     setSaving(true);
-    const url = mode === 'edit' ? `http://localhost:5001/api/customers/${initialData.customerId}` : 'http://localhost:5001/api/customers';
+    const url = mode === 'edit' ? `${API_BASE_URL}/api/customers/${initialData.customerId}` : `${API_BASE_URL}/api/customers`;
     const method = mode === 'edit' ? 'PUT' : 'POST';
 
     try {

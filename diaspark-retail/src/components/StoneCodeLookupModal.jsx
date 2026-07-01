@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './StoneCodeLookupModal.css';
 
@@ -19,7 +20,7 @@ function StoneCodeLookupModal({ onClose, onSelect }) {
     setLoading(true);
     try {
       const params = new URLSearchParams(search);
-      const response = await fetch(`http://localhost:5001/api/stonecodes?${params.toString()}`);
+      const response = await fetch(`${API_BASE_URL}/api/stonecodes?${params.toString()}`);
       if (response.ok) {
         const data = await response.json();
         setStoneCodes(data);

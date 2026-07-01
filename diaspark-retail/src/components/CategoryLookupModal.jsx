@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './CategoryLookupModal.css';
 
@@ -8,7 +9,7 @@ const CategoryLookupModal = ({ onClose, onSelect }) => {
   const [filteredData, setFilteredData] = useState([]);
 
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/categories')
+    fetch(`${API_BASE_URL}/api/categories`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {

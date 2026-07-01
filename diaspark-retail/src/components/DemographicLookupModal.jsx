@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './DemographicLookupModal.css';
 
@@ -12,7 +13,7 @@ const DemographicLookupModal = ({ onClose, onSelect }) => {
   const [filteredData, setFilteredData] = useState([]);
 
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/demographics')
+    fetch(`${API_BASE_URL}/api/demographics`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {

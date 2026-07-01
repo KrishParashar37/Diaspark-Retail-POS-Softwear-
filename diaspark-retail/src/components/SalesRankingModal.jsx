@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './SalesRankingModal.css';
 
@@ -34,7 +35,7 @@ function SalesRankingModal({ onClose }) {
         }
       }
 
-      let url = `http://localhost:5001/api/reports/split-sales-summary?reportType=Sales%20Person`;
+      let url = `${API_BASE_URL}/api/reports/split-sales-summary?reportType=Sales%20Person`;
       if (fetchStart && fetchEnd) {
         url += `&startDate=${encodeURIComponent(fetchStart)}&endDate=${encodeURIComponent(fetchEnd)}`;
       }

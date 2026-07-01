@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 
 function SalespersonReportModal({ isOpen, onClose, defaultDate }) {
@@ -19,7 +20,7 @@ function SalespersonReportModal({ isOpen, onClose, defaultDate }) {
   if (!isOpen) return null;
 
   const generateExcel = () => {
-    const detailsUrl = `http://localhost:5001/api/reports/tender-details${useDate && dateStr ? '?date=' + dateStr : ''}`;
+    const detailsUrl = `${API_BASE_URL}/api/reports/tender-details${useDate && dateStr ? '?date=' + dateStr : ''}`;
     fetch(detailsUrl)
       .then(res => res.json())
       .then(data => {

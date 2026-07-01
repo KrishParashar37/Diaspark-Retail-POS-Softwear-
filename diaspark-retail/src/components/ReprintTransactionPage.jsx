@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './SalesPage.css';
 import './DatePicker.css';
@@ -53,7 +54,7 @@ function ReprintTransactionPage({ onNavigate }) {
   const handleSearch = async () => {
     setLoading(true);
     try {
-      let url = 'http://localhost:5001/api/orders';
+      let url = `${API_BASE_URL}/api/orders`;
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();

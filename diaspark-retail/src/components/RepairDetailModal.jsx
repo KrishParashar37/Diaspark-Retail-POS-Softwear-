@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import CategoryLookupModal from './CategoryLookupModal';
 import VendorLookupModal from './VendorLookupModal';
@@ -127,12 +128,12 @@ function RepairDetailModal({ onClose, onSave }) {
   }, [repairRows]);
 
   React.useEffect(() => {
-    fetch('http://localhost:5001/api/salespersons')
+    fetch(`${API_BASE_URL}/api/salespersons`)
       .then(res => res.json())
       .then(data => setSalesPersons(data))
       .catch(err => console.error(err));
 
-    fetch('http://localhost:5001/api/appraisers')
+    fetch(`${API_BASE_URL}/api/appraisers`)
       .then(res => {
         if (!res.ok) throw new Error("Not found");
         return res.json();

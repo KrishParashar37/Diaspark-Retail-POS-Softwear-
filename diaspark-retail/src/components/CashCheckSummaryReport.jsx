@@ -1,10 +1,11 @@
+import API_BASE_URL from '../config.js';
 import React, { useEffect, useState } from 'react';
 
 function CashCheckSummaryReport({ date, format, onClose }) {
   const [tenderSummary, setTenderSummary] = useState([]);
   
   useEffect(() => {
-    fetch('http://localhost:5001/api/reports/tender-summary')
+    fetch(`${API_BASE_URL}/api/reports/tender-summary`)
       .then(res => res.json())
       .then(data => {
         if (data.status === 'success') setTenderSummary(data.data);

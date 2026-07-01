@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './EditCustomerModal.css';
 import CategoryLookupModal from './CategoryLookupModal';
@@ -55,7 +56,7 @@ function EditCustomerModal({ customer, onClose }) {
     const route = routeMap[activeTopTab];
     if (route) {
       setIsLoading(true);
-      fetch(`http://localhost:5001/api/customers/${customer.customerId}/${route}`)
+      fetch(`${API_BASE_URL}/api/customers/${customer.customerId}/${route}`)
         .then(res => res.json())
         .then(data => {
           if (data.success) {

@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './SalespersonModal.css';
 import SalesPeopleLookupModal from './SalesPeopleLookupModal';
@@ -19,7 +20,7 @@ function SalespersonModal({ onClose, onSelect }) {
   useEffect(() => {
     const fetchSalespersons = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/salespersons');
+        const response = await fetch(`${API_BASE_URL}/api/salespersons`);
         if (response.ok) {
           const data = await response.json();
           setSalespersons(data);

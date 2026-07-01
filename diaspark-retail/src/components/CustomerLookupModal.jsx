@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './CustomerLookupModal.css';
 import CustomerFormModal from './CustomerFormModal';
@@ -28,7 +29,7 @@ function CustomerLookupModal({ onClose, onSelect }) {
 
   // Fetch salespersons list on mount (table starts blank until user searches)
   useEffect(() => {
-    fetch('http://localhost:5001/api/salespersons')
+    fetch(`${API_BASE_URL}/api/salespersons`)
       .then(res => res.json())
       .then(data => setSalespersonsList(data))
       .catch(err => console.error("Error fetching salespersons:", err));
@@ -37,7 +38,7 @@ function CustomerLookupModal({ onClose, onSelect }) {
   const fetchCustomers = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5001/api/customers');
+      const response = await fetch(`${API_BASE_URL}/api/customers`);
       if (response.ok) {
         const data = await response.json();
         setAllCustomers(data);
@@ -82,8 +83,8 @@ function CustomerLookupModal({ onClose, onSelect }) {
       if (salesperson.trim()) params.append('salesperson', salesperson.trim());
 
       const url = params.toString()
-        ? `http://localhost:5001/api/customers/search?${params.toString()}`
-        : 'http://localhost:5001/api/customers';
+        ? `${API_BASE_URL}/api/customers/search?${params.toString()}`
+        : `${API_BASE_URL}/api/customers`;
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();

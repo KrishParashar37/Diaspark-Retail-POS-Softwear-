@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState, useEffect } from 'react';
 import './FamilyCustomerLookupModal.css';
 
@@ -10,7 +11,7 @@ const FamilyCustomerLookupModal = ({ onClose, onSelect }) => {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5001/api/customers')
+    fetch(`${API_BASE_URL}/api/customers`)
       .then(res => res.json())
       .then(data => {
         if(data.success && Array.isArray(data.data)) {

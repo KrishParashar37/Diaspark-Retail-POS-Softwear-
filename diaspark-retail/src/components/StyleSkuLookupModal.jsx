@@ -1,3 +1,4 @@
+import API_BASE_URL from '../config.js';
 import React, { useState } from 'react';
 import './StyleSkuLookupModal.css';
 
@@ -8,7 +9,7 @@ function StyleSkuLookupModal({ onClose, onSelect }) {
 
   React.useEffect(() => {
     setLoading(true);
-    fetch('http://localhost:5001/api/items')
+    fetch(`${API_BASE_URL}/api/items`)
       .then(res => res.json())
       .then(data => {
         // Map the API fields to the format expected by the table if necessary
